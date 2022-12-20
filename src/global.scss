@@ -1,0 +1,47 @@
+$title: #39b54a;
+$primary: #000;
+$seconday: #fff;
+$tertiary: #171717;
+$dark: rgba(255, 255, 255, .6);
+$primary-background: #f5f5f5;
+$secondary-background: #39b54a;
+$tertiary-background: #00662b;
+$image-backgound: transparent linear-gradient(180deg, #39B54AB3 0%, #00662BB3 100%) 0% 0%;
+$dark-backgound: #292929;
+
+$width-md: 991px;
+$width-sm: 768px;
+$width-xs: 480px;
+
+@mixin mobile-md {
+	@media (max-width: #{$width-md}) {
+		@content;
+	}
+}
+
+@mixin mobile-sm {
+	@media (max-width: #{$width-sm}) {
+		@content;
+	}
+}
+
+@mixin mobile-xs {
+	@media (max-width: #{$width-xs}) {
+		@content;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: 'Raleway', sans-serif;
+	color: $title;
+}
+
+p,
+a,
+span {
+	font-family: 'Roboto', sans-serif;
+}

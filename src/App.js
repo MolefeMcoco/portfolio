@@ -1,23 +1,40 @@
 import logo from './logo.svg';
-import './App.css';
-import { useContext } from 'react';
-import { DataContext } from './context/context';
+import './App.scss';
+import React, { useState, createContext, useEffect, useContext } from 'react';
+import { DataContext } from './context/data.context';
+import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
+import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
+
+export const ThemeContext = createContext(null);
 
 function App() {
 	const { data } = useContext(DataContext);
-	console.log(data);
+	const [ theme, setTheme ] = useState('dark');
+	useEffect(() => {
+		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+			const colorScheme = event.matches ? 'dark' : 'light';
+			console.log(colorScheme); // "dark" or "light"
+			setTheme(colorScheme);
+		});
+	}, []);
+	const toggleTheme = () => {
+		setTheme((curr) => (curr === 'light' ? 'dark' : 'light'));
+	};
+
 	return (
-		<div className="App">
-			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
-				<p>
-					Edit <code>src/App.js</code> and save to reload.
-				</p>
-				<a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-					Learn React
-				</a>
-			</header>
-		</div>
+		<ThemeContext.Provider value={{ theme, toggleTheme }}>
+			<div className="App" id={theme}>
+				{theme === 'dark' ? (
+					<LightModeOutlinedIcon className="light-icon" onClick={() => toggleTheme()} />
+				) : (
+					<DarkModeOutlinedIcon className="dark-icon" onClick={() => toggleTheme()} />
+				)}
+				<header className="App-header">
+					<h2>This is heading</h2>
+					<p>this is a paragraph</p>
+				</header>
+			</div>
+		</ThemeContext.Provider>
 	);
 }
 

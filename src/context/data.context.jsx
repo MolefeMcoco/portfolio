@@ -19,8 +19,6 @@ const app = initializeApp(firebaseConfig);
 export const DataContext = createContext();
 export const DataContextProvider = ({ children }) => {
 	const [ data, setData ] = useState();
-	const [ isLoading, setIsLoading ] = useState(false);
-	const [ error, setError ] = useState(null);
 
 	useEffect(() => {
 		const dbRef = ref(getDatabase(app));
@@ -29,7 +27,6 @@ export const DataContextProvider = ({ children }) => {
 				if (snapshot.exists()) {
 					setData(snapshot.val());
 				} else {
-					console.log('No data available');
 				}
 			})
 			.catch((error) => {
@@ -40,9 +37,7 @@ export const DataContextProvider = ({ children }) => {
 	return (
 		<DataContext.Provider
 			value={{
-				data,
-				isLoading,
-				error
+				data
 			}}
 		>
 			{children}
