@@ -1,9 +1,10 @@
-import logo from './logo.svg';
 import './App.scss';
 import React, { useState, createContext, useEffect, useContext } from 'react';
 import { DataContext } from './context/data.context';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
+
+import Header from './components/header/Header';
 
 export const ThemeContext = createContext(null);
 
@@ -23,17 +24,16 @@ function App() {
 
 	return (
 		<ThemeContext.Provider value={{ theme, toggleTheme }}>
-			<div className="App" id={theme}>
-				{theme === 'dark' ? (
-					<LightModeOutlinedIcon className="light-icon" onClick={() => toggleTheme()} />
-				) : (
-					<DarkModeOutlinedIcon className="dark-icon" onClick={() => toggleTheme()} />
-				)}
-				<header className="App-header">
-					<h2>This is heading</h2>
-					<p>this is a paragraph</p>
-				</header>
-			</div>
+			{data && (
+				<div className="App" id="light">
+					{theme === 'dark' ? (
+						<LightModeOutlinedIcon className="light-icon" onClick={() => toggleTheme()} />
+					) : (
+						<DarkModeOutlinedIcon className="dark-icon" onClick={() => toggleTheme()} />
+					)}
+					<Header />
+				</div>
+			)}
 		</ThemeContext.Provider>
 	);
 }

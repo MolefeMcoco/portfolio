@@ -1,0 +1,36 @@
+@import "../../global.scss";
+
+.navbar {
+	background-color: #fff;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	box-shadow: $shadow;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	img {
+		height: 30px;
+	}
+
+	.navigation {
+		width: 50%;
+		display: flex;
+		justify-content: space-between;
+		p {
+			text-transform: capitalize;
+			cursor: pointer;
+			font-weight: 300;
+			transition: none !important;
+			&:hover {
+				color: $secondary-background !important;
+				transition: none !important;
+			}
+		}
+	}
+}

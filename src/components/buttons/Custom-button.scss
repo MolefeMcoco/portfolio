@@ -1,0 +1,40 @@
+@import "../../global.scss";
+
+.custom-button {
+	min-width: 165px;
+	max-width: 100%;
+	margin-bottom: 10px;
+	margin-right: 50px;
+	height: 50px;
+	padding: 0 35px;
+	font-size: 15px;
+	background-color: $secondary-background;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bolder;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all ease-in 0.2s;
+	border: 1px solid $title;
+	border-radius: 2px;
+	&:hover {
+		background-color: $tertiary;
+		color: $seconday;
+		border: 1px solid $tertiary;
+	}
+
+	&.whatsapp-button {
+		background-color: $primary-background;
+		color: #000;
+		border: 1px solid $title;
+
+		&:hover {
+			background-color: $tertiary;
+			color: $seconday;
+			border: 1px solid $tertiary;
+		}
+	}
+}

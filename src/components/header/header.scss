@@ -1,0 +1,47 @@
+@import '../../global.scss';
+.header {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	.container {
+		display: flex;
+		align-items: center;
+
+		.left {
+			flex: 1;
+			height: 50vh;
+			h2 {
+				color: $primary;
+			}
+
+			.buttons {
+				display: flex;
+				margin-top: 50px;
+
+				span {
+					margin-right: 5px;
+				}
+			}
+		}
+
+		.right {
+			flex: 1;
+			display: flex;
+			justify-content: flex-end;
+			.img-container {
+				align-items: center;
+				background: $image-backgound;
+				border-radius: 50%;
+				display: flex;
+				height: 500px;
+				justify-content: center;
+				width: 500px;
+			}
+			img {
+				height: 90%;
+			}
+		}
+	}
+}

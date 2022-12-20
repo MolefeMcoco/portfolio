@@ -6,26 +6,34 @@ $dark: rgba(255, 255, 255, .6);
 $primary-background: #f5f5f5;
 $secondary-background: #39b54a;
 $tertiary-background: #00662b;
-$image-backgound: transparent linear-gradient(180deg, #39B54AB3 0%, #00662BB3 100%) 0% 0%;
+$image-backgound: linear-gradient(0deg, #00662b 0, #13aa52 90%);
 $dark-backgound: #292929;
+$shadow: 0px 3px 6px #0000000D;
 
-$width-md: 991px;
+$width-lg: 1100px;
+$width-md: 992px;
 $width-sm: 768px;
-$width-xs: 480px;
+$width-xs: 567px;
 
-@mixin mobile-md {
+@mixin desktop-lg {
+	@media (max-width: #{$width-lg}) {
+		@content;
+	}
+}
+
+@mixin desktop-md {
 	@media (max-width: #{$width-md}) {
 		@content;
 	}
 }
 
-@mixin mobile-sm {
+@mixin tablet {
 	@media (max-width: #{$width-sm}) {
 		@content;
 	}
 }
 
-@mixin mobile-xs {
+@mixin mobile {
 	@media (max-width: #{$width-xs}) {
 		@content;
 	}
@@ -38,8 +46,23 @@ h4,
 h5 {
 	font-family: 'Raleway', sans-serif;
 	color: $title;
+	margin: 0;
+}
+h1 {
+	font-size: 60px;
+	font-weight: 800;
+}
+h2 {
+	font-size: 50px;
 }
 
+h3 {
+	font-size: 32px;
+}
+
+h4 {
+	font-size: 27px;
+}
 p,
 a,
 span {
