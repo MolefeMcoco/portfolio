@@ -4,7 +4,7 @@ import './navbar.scss';
 
 const Navbar = () => {
 	const { data } = useContext(DataContext);
-	console.log(data && data.header.navigation);
+
 	return (
 		<nav className="navbar">
 			<div className="container">
@@ -13,7 +13,7 @@ const Navbar = () => {
 				</div>
 				<div className="navigation">
 					{data.header.navigation.map((item) => {
-						return <p>{item}</p>;
+						return <p key={item}>{item}</p>;
 					})}
 				</div>
 			</div>

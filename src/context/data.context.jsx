@@ -32,7 +32,6 @@ export const DataContextProvider = ({ children }) => {
 			.catch((error) => {
 				console.error(error);
 			});
-		console.log('i fire once');
 	}, []);
 	return (
 		<DataContext.Provider

@@ -5,6 +5,7 @@ import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 
 import Header from './components/header/Header';
+import Services from './components/services/Services';
 
 export const ThemeContext = createContext(null);
 
@@ -14,7 +15,7 @@ function App() {
 	useEffect(() => {
 		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
 			const colorScheme = event.matches ? 'dark' : 'light';
-			console.log(colorScheme); // "dark" or "light"
+
 			setTheme(colorScheme);
 		});
 	}, []);
@@ -32,6 +33,7 @@ function App() {
 						<DarkModeOutlinedIcon className="dark-icon" onClick={() => toggleTheme()} />
 					)}
 					<Header />
+					<Services />
 				</div>
 			)}
 		</ThemeContext.Provider>
