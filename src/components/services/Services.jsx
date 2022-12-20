@@ -12,7 +12,7 @@ const Services = () => {
 			<div className="container">
 				{services.map((item) => {
 					return (
-						<div className="item">
+						<div className="item" key={item.title}>
 							<img src={`https://mmwebdesign.co.za/assets/images/${item.icon}.svg`} alt={item.icon} />
 							<h4>{item.title}</h4>
 							<p>{item.disc}</p>

@@ -6,6 +6,7 @@ import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 
 import Header from './components/header/Header';
 import Services from './components/services/Services';
+import Work from './components/work/Work';
 
 export const ThemeContext = createContext(null);
 
@@ -34,6 +35,7 @@ function App() {
 					)}
 					<Header />
 					<Services />
+					<Work />
 				</div>
 			)}
 		</ThemeContext.Provider>

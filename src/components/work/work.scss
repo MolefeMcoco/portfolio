@@ -1,0 +1,47 @@
+@import "../../global.scss";
+
+.work {
+	.container {
+		display: flex;
+		flex-direction: column;
+
+		h2 {
+			margin: 100px 0px 20px 0px;
+		}
+
+		.item {
+			display: flex;
+			border-radius: 25px;
+			margin-bottom: 30px;
+			box-shadow: $shadow;
+			height: 425px;
+			.image {
+				flex: 2;
+
+				img {
+					width: 100%;
+				}
+			}
+			.business-info {
+				display: flex;
+				flex: 1;
+				flex-direction: column;
+				background-color: $primary;
+				padding: 10px 0px 0px 20px;
+
+				border-radius: 0px 20px 20px 0px;
+				justify-content: center;
+				p {
+					color: $primary-background !important;
+
+					a {
+						color: $primary-background;
+					}
+				}
+				img {
+					width: 150px;
+				}
+			}
+		}
+	}
+}
