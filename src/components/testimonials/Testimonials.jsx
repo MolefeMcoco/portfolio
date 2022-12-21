@@ -4,7 +4,7 @@ import './testimonials.scss';
 const Testimonials = () => {
 	const { data } = useContext(DataContext);
 	return (
-		<section className="testimonials">
+		<section className="testimonials" id="testimonials">
 			<div className="container">
 				<div className="left">
 					<h2>{data.testimonials.heading}</h2>

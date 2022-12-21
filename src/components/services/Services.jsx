@@ -10,7 +10,7 @@ const Services = () => {
 	console.log(theme);
 
 	return (
-		<section className="services">
+		<section className="services" id="services">
 			<div className="container">
 				{services.map((item) => {
 					return (

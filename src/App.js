@@ -39,7 +39,9 @@ function App() {
 					) : (
 						<DarkModeOutlinedIcon className="dark-icon" onClick={() => toggleTheme()} />
 					)}
+
 					<Navbar />
+
 					<Header />
 					<Services />
 					<Work />

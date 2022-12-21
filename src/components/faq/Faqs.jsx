@@ -6,7 +6,7 @@ import { DataContext } from '../../context/data.context';
 const Faqs = () => {
 	const { data } = useContext(DataContext);
 	return (
-		<section className="faq">
+		<section className="faq" id="faq's">
 			<div className="container">
 				<div className="content">
 					<div className="left">

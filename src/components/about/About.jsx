@@ -8,7 +8,7 @@ const About = () => {
 	const { data } = useContext(DataContext);
 	console.log(data.about.title);
 	return (
-		<section className="about">
+		<section className="about" id="about">
 			<div className="container">
 				<div className="left">
 					<div className="img-container">

@@ -8,7 +8,7 @@ const Header = () => {
 	const { data } = useContext(DataContext);
 	const header = data.header;
 	return (
-		<section className="header">
+		<section className="header" id="home">
 			<div className="container">
 				<div className="left">
 					<div className="left-container">

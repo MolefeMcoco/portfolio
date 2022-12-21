@@ -6,7 +6,7 @@ const Work = () => {
 	const { data } = useContext(DataContext);
 	console.log(data.portfolio[0].url);
 	return (
-		<section className="work">
+		<section className="work" id="work">
 			<div className="container">
 				<h2>My Work</h2>
 				{data.portfolio.map((item) => {

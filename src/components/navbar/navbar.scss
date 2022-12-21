@@ -4,6 +4,10 @@
 	.navbar {
 		background-color: $tertiary !important;
 		transition: all ease-in-out 1s;
+
+		a {
+			color: $dark;
+		}
 	}
 }
 
@@ -16,29 +20,44 @@
 	box-shadow: $shadow;
 	z-index: 999;
 	transition: all ease-in-out 1s;
+	padding: 10px 0px;
+
+	.active {
+		border-bottom: solid 2px $secondary-background;
+	}
 
 	.container {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		.logo {
+			cursor: pointer;
+
+			a {
+				border: none !important;
+			}
+		}
 	}
 
 	img {
-		height: 30px;
+		height: 50px;
 	}
 
 	.navigation {
 		width: 50%;
 		display: flex;
 		justify-content: space-between;
-		p {
+
+		a {
 			text-transform: capitalize;
 			cursor: pointer;
 			font-weight: 300;
 			transition: none !important;
 			&:hover {
-				color: $secondary-background !important;
 				transition: none !important;
+
+				border-bottom: solid 2px $secondary-background;
 			}
 		}
 	}
