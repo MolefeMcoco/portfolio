@@ -4,7 +4,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import './about.scss';
 import { DataContext } from '../../context/data.context';
 
-const About = () => {
+const About = ({ displayModal, slide }) => {
 	const { data } = useContext(DataContext);
 	console.log(data.about.title);
 	return (
@@ -24,8 +24,19 @@ const About = () => {
 					<p>{data.about.paragraph}</p>
 					<p>{data.about.paragraph}</p>
 					<div className="buttons">
-						<CustomButton>{data.buttons.hire}</CustomButton>
-						<CustomButton whatsappButton>
+						<CustomButton
+							onClick={() => displayModal()}
+							variants={slide}
+							animate="visible"
+							initial="hidden"
+							transition={{ delay: 4, type: 'tween', duration: 1.5 }}
+						>
+							{data.buttons.hire}
+						</CustomButton>
+						<CustomButton
+							whatsappButton
+							onClick={() => window.open('https://api.whatsapp.com/send?phone=27662660513', '_blank')}
+						>
 							<span>
 								<WhatsAppIcon sx={{ fontSize: 18, color: '#39B54A' }} />
 							</span>{' '}

@@ -13,12 +13,14 @@ import Faqs from './components/faq/Faqs';
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import CopyRight from './components/copyRight/CopyRight';
+import Modals from './components/modal/Modals';
 
 export const ThemeContext = createContext(null);
 
 function App() {
 	const { data } = useContext(DataContext);
-	const [ theme, setTheme ] = useState('dark');
+	const [ theme, setTheme ] = useState('light');
+	const [ showModal, setShowModal ] = useState(false);
 	useEffect(() => {
 		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
 			const colorScheme = event.matches ? 'dark' : 'light';
@@ -29,7 +31,21 @@ function App() {
 	const toggleTheme = () => {
 		setTheme((curr) => (curr === 'light' ? 'dark' : 'light'));
 	};
+	const slide = {
+		visible: {
+			y: 0
+		},
+		hidden: {
+			y: '100vw'
+		},
+		exit: {
+			y: '-100vw'
+		}
+	};
 
+	const displayModal = () => {
+		setShowModal(true);
+	};
 	return (
 		<ThemeContext.Provider value={{ theme, toggleTheme }}>
 			{data && (
@@ -39,15 +55,15 @@ function App() {
 					) : (
 						<DarkModeOutlinedIcon className="dark-icon" onClick={() => toggleTheme()} />
 					)}
-
+					<Modals showModal={showModal} setShowModal={setShowModal} />
 					<Navbar />
 
-					<Header />
+					<Header displayModal={displayModal} slide={slide} />
 					<Services />
 					<Work />
 					<Testimonials />
 					<Faqs />
-					<About />
+					<About displayModal={displayModal} slide={slide} />
 					<Contact />
 					<CopyRight />
 				</div>

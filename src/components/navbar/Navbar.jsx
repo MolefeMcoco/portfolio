@@ -10,7 +10,7 @@ const Navbar = () => {
 		<nav className="navbar">
 			<div className="container">
 				<div className="logo">
-					<Link to="home" spy={true} smooth={true} offset={-50} duration={500}>
+					<Link to="home" spy={true} smooth={true} offset={-200} duration={500}>
 						<img src={data.header.logo} alt={data.header.alt} />
 					</Link>
 				</div>
