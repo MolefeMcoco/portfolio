@@ -1,10 +1,25 @@
 @import "../../global.scss";
 
+#dark {
+	.testimonials {
+		background: linear-gradient(90deg, $dark-backgound 50%, $secondary-background 50%);
+		transition: all ease-in-out 1s;
+		.item {
+			background-color: $tertiary;
+			transition: all ease-in-out 1s;
+
+			h4 {
+				color: $dark;
+				transition: all ease-in-out 1s;
+			}
+		}
+	}
+}
+
 .testimonials {
 	background: linear-gradient(90deg, $primary-background 50%, $secondary-background 50%);
 	border-radius: $border-radius 0 0 $border-radius;
-	padding: 50px 0px;
-	margin: 100px 0px;
+	transition: all ease-in-out 1s;
 	.container {
 		display: flex;
 		justify-content: center;
@@ -34,10 +49,12 @@
 			border-radius: $border-radius;
 			box-shadow: $shadow;
 			margin: 10px;
+			transition: all ease-in-out 1s;
 
 			h4 {
 				color: $primary;
 				margin-top: 20px;
+				transition: all ease-in-out 1s;
 			}
 		}
 

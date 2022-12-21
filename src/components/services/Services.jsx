@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
 import { DataContext } from '../../context/data.context';
+import { ThemeContext } from '../../App';
 import './services.scss';
 
 const Services = () => {
 	const { data } = useContext(DataContext);
+	const { theme } = useContext(ThemeContext);
 	const services = data.services;
-	console.log(services);
+	console.log(theme);
 
 	return (
 		<section className="services">
@@ -13,7 +15,12 @@ const Services = () => {
 				{services.map((item) => {
 					return (
 						<div className="item" key={item.title}>
-							<img src={`https://mmwebdesign.co.za/assets/images/${item.icon}.svg`} alt={item.icon} />
+							<img
+								src={`https://mmwebdesign.co.za/assets/images/${theme === 'light'
+									? item.icon
+									: item.darkicon}.svg`}
+								alt={item.icon}
+							/>
 							<h4>{item.title}</h4>
 							<p>{item.disc}</p>
 						</div>

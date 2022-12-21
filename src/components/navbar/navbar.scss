@@ -1,5 +1,12 @@
 @import "../../global.scss";
 
+#dark {
+	.navbar {
+		background-color: $tertiary !important;
+		transition: all ease-in-out 1s;
+	}
+}
+
 .navbar {
 	background-color: #fff;
 	width: 100%;
@@ -8,6 +15,7 @@
 	left: 0px;
 	box-shadow: $shadow;
 	z-index: 999;
+	transition: all ease-in-out 1s;
 
 	.container {
 		display: flex;

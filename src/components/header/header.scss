@@ -1,12 +1,19 @@
 @import '../../global.scss';
+
+#dark {
+	h2 {
+		color: $secondary;
+	}
+}
+
 .header {
 	position: relative;
 	z-index: 1;
-	padding-top: 100px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	padding-top: 100px;
 	.container {
 		display: flex;
 		align-items: center;
@@ -14,9 +21,11 @@
 		.left {
 			flex: 1;
 			display: flex;
+			transition: all ease-in-out 1s;
 
 			h2 {
 				color: $primary;
+				transition: all ease-in-out 1s;
 			}
 
 			.buttons {

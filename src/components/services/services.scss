@@ -1,7 +1,16 @@
 @import "../../global.scss";
 
+#dark {
+	.services {
+		.container {
+			background-color: $tertiary;
+			transition: all ease-in-out 1s;
+		}
+	}
+}
+
 .services {
-	margin-bottom: 50px;
+	margin-top: -120px;
 	.container {
 		display: flex;
 		justify-content: center;
@@ -11,7 +20,8 @@
 		z-index: 2;
 		position: relative;
 		box-shadow: $shadow;
-		margin-top: -20px;
+		transition: all ease-in-out 1s;
+
 		.item {
 			display: flex;
 			flex-direction: column;
@@ -24,6 +34,10 @@
 
 			img {
 				height: 30px;
+			}
+
+			img path {
+				fill: red !important;
 			}
 
 			h4 {

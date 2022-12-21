@@ -11,6 +11,8 @@ import Work from './components/work/Work';
 import Testimonials from './components/testimonials/Testimonials';
 import Faqs from './components/faq/Faqs';
 import About from './components/about/About';
+import Contact from './components/contact/Contact';
+import CopyRight from './components/copyRight/CopyRight';
 
 export const ThemeContext = createContext(null);
 
@@ -31,7 +33,7 @@ function App() {
 	return (
 		<ThemeContext.Provider value={{ theme, toggleTheme }}>
 			{data && (
-				<div className="App" id="light">
+				<div className="App" id={theme}>
 					{theme === 'dark' ? (
 						<LightModeOutlinedIcon className="light-icon" onClick={() => toggleTheme()} />
 					) : (
@@ -44,6 +46,8 @@ function App() {
 					<Testimonials />
 					<Faqs />
 					<About />
+					<Contact />
+					<CopyRight />
 				</div>
 			)}
 		</ThemeContext.Provider>

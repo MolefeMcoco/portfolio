@@ -1,5 +1,12 @@
 @import "../../global.scss";
 
+#dark {
+	.whatsapp-button {
+		color: $secondary;
+		transition: all ease-in-out 1s;
+	}
+}
+
 .custom-button {
 	min-width: 165px;
 	max-width: 100%;
@@ -27,14 +34,19 @@
 	}
 
 	&.whatsapp-button {
-		background-color: $primary-background;
+		background-color: transparent;
 		color: #000;
 		border: 1px solid $title;
+		transition: all ease-in-out 1s;
 
 		&:hover {
 			background-color: $tertiary;
 			color: $secondary;
 			border: 1px solid $tertiary;
 		}
+	}
+	&.submitButton {
+		width: 100%;
+		padding: 0px;
 	}
 }

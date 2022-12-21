@@ -4,7 +4,7 @@ import { DataContext } from '../../context/data.context';
 
 const Work = () => {
 	const { data } = useContext(DataContext);
-	console.log(data.portfolio);
+	console.log(data.portfolio[0].url);
 	return (
 		<section className="work">
 			<div className="container">
@@ -19,7 +19,7 @@ const Work = () => {
 								<img src={item.logo} alt="logo" />
 								<p>{item.desc}</p>
 								<p>
-									<a href={item.url}>{item.url}</a>
+									<a href={item.link}>{item.url}</a>
 								</p>
 							</div>
 						</div>

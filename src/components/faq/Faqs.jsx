@@ -8,9 +8,9 @@ const Faqs = () => {
 	return (
 		<section className="faq">
 			<div className="container">
-				<h2>FAQ's</h2>
 				<div className="content">
 					<div className="left">
+						<h2>FAQ's</h2>
 						<img src="https://mmwebdesign.co.za/assets/images/question-mark.webp" alt="faq" />
 					</div>
 					<div className="right">

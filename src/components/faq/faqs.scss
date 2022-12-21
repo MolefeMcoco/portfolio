@@ -15,6 +15,7 @@
 			padding: 40px;
 			img {
 				width: 100%;
+				margin-top: 50px;
 			}
 		}
 
@@ -25,8 +26,25 @@
 	}
 }
 
+#dark {
+	.faq-row-wrapper {
+		background-color: $dark-backgound;
+		transition: all ease-in-out 1s;
+
+		.row-title {
+			color: $secondary;
+			transition: all ease-in-out 1s;
+		}
+		.row-content-text {
+			color: $dark;
+			transition: all ease-in-out 1s;
+		}
+	}
+}
+
 .faq-row-wrapper {
 	background-color: $primary-background;
+	transition: all ease-in-out 1s;
 	.faq-title {
 	}
 
@@ -36,12 +54,14 @@
 			font-family: 'Roboto', sans-serif;
 			border: none;
 			.row-title {
+				transition: all ease-in-out 1s;
 				font-weight: bold;
 				border-bottom: solid 1px $secondary-background;
 			}
 
 			.row-content {
 				.row-content-text {
+					transition: all ease-in-out 1s;
 					padding: 10px 0px;
 				}
 			}

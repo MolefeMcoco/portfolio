@@ -1,0 +1,29 @@
+@import "../../global.scss";
+
+.contact-form {
+	label,
+	input,
+	textarea,
+	input::placeholder {
+		font-family: 'Roboto', sans-serif !important;
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	.form-group {
+		margin: 20px 0px;
+	}
+
+	label {
+		color: $secondary;
+		letter-spacing: 1px;
+	}
+
+	input,
+	textarea {
+		padding: 20px;
+		border-radius: 2px;
+		border: none;
+		margin-top: 5px;
+	}
+}
