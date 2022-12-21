@@ -10,6 +10,7 @@ import Services from './components/services/Services';
 import Work from './components/work/Work';
 import Testimonials from './components/testimonials/Testimonials';
 import Faqs from './components/faq/Faqs';
+import About from './components/about/About';
 
 export const ThemeContext = createContext(null);
 
@@ -42,6 +43,7 @@ function App() {
 					<Work />
 					<Testimonials />
 					<Faqs />
+					<About />
 				</div>
 			)}
 		</ThemeContext.Provider>

@@ -1,0 +1,44 @@
+@import "../../global.scss";
+
+.about {
+	margin: 100px 0px;
+
+	.container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.left {
+			display: flex;
+			flex: 1;
+			.img-container {
+				background-color: $secondary-background;
+				border-radius: $border-radius;
+				img {
+					width: 100%;
+					margin-left: 10px;
+					border-radius: $border-radius;
+					padding: 10px;
+				}
+			}
+		}
+		.right {
+			flex: 2;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			padding: 50px 50px 50px 120px;
+			.subheading {
+				font-weight: bold;
+			}
+
+			.buttons {
+				display: flex;
+				margin-top: 50px;
+
+				span {
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+}

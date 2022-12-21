@@ -20,12 +20,12 @@ const Header = () => {
 							best customer experience.
 						</p>
 						<div className="buttons">
-							<CustomButton>Hire Me Now</CustomButton>
+							<CustomButton>{data.buttons.hire}</CustomButton>
 							<CustomButton whatsappButton>
 								<span>
 									<WhatsAppIcon sx={{ fontSize: 18, color: '#39B54A' }} />
 								</span>{' '}
-								Let's chat
+								{data.buttons.chat}
 							</CustomButton>
 						</div>
 					</div>

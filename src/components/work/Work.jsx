@@ -11,7 +11,7 @@ const Work = () => {
 				<h2>My Work</h2>
 				{data.portfolio.map((item) => {
 					return (
-						<div className="item">
+						<div className="item" key={item.logo}>
 							<div className="image">
 								<img src={item.image} alt={item.alt} />
 							</div>
