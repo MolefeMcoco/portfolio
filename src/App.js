@@ -4,9 +4,12 @@ import { DataContext } from './context/data.context';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 
+import Navbar from './components/navbar/Navbar';
 import Header from './components/header/Header';
 import Services from './components/services/Services';
 import Work from './components/work/Work';
+import Testimonials from './components/testimonials/Testimonials';
+import Faqs from './components/faq/Faqs';
 
 export const ThemeContext = createContext(null);
 
@@ -33,9 +36,12 @@ function App() {
 					) : (
 						<DarkModeOutlinedIcon className="dark-icon" onClick={() => toggleTheme()} />
 					)}
+					<Navbar />
 					<Header />
 					<Services />
 					<Work />
+					<Testimonials />
+					<Faqs />
 				</div>
 			)}
 		</ThemeContext.Provider>

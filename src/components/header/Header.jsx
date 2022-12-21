@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import Navbar from '../navbar/Navbar';
 import './header.scss';
 import { DataContext } from '../../context/data.context';
 import CustomButton from '../buttons/CustomButton';
@@ -10,7 +9,6 @@ const Header = () => {
 	const header = data.header;
 	return (
 		<section className="header">
-			<Navbar />
 			<div className="container">
 				<div className="left">
 					<div className="left-container">

@@ -1,0 +1,60 @@
+@import "../../global.scss";
+
+.testimonials {
+	background: linear-gradient(90deg, $primary-background 50%, $secondary-background 50%);
+	border-radius: $border-radius 0 0 $border-radius;
+	padding: 50px 0px;
+	margin: 100px 0px;
+	.container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	h2 {
+		color: $title;
+	}
+
+	.left {
+		margin: 10px;
+	}
+
+	.right {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.item {
+			background-color: $primary-background;
+			padding: 40px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			border-radius: $border-radius;
+			box-shadow: $shadow;
+			margin: 10px;
+
+			h4 {
+				color: $primary;
+				margin-top: 20px;
+			}
+		}
+
+		img {
+			width: 100px;
+			height: 100px;
+		}
+
+		p {
+			font-style: italic;
+			font-weight: 400;
+			text-align: center;
+		}
+
+		.company {
+			font-style: normal;
+			font-weight: bold;
+		}
+	}
+}
