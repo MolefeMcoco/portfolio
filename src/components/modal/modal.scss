@@ -33,6 +33,9 @@
 		margin-top: 70px;
 		position: relative;
 		z-index: 99999;
+		@include desktop-md {
+			min-width: 70%;
+		}
 
 		h2 {
 			width: 100%;

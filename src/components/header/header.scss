@@ -14,14 +14,38 @@
 	align-items: center;
 	flex-direction: column;
 	padding-top: 100px;
+
+	@include desktop-md {
+		overflow: hidden;
+	}
 	.container {
 		display: flex;
 		align-items: center;
 
+		@include desktop-md {
+			align-items: flex-start;
+		}
+
+		@include mobile {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.hidden {
+			display: none !important;
+			@include mobile {
+				display: flex !important;
+			}
+		}
 		.left {
 			flex: 1;
 			display: flex;
 			transition: all ease-in-out 1s;
+
+			@include mobile {
+				height: 140px;
+			}
 
 			h2 {
 				color: $primary;
@@ -31,6 +55,14 @@
 			.buttons {
 				display: flex;
 				margin-top: 50px;
+
+				height: 300px;
+				@include desktop-md {
+					margin-top: 25px;
+				}
+				@include mobile {
+					height: 140px;
+				}
 
 				span {
 					margin-right: 5px;
@@ -42,6 +74,11 @@
 			flex: 1;
 			display: flex;
 			justify-content: center;
+
+			@include mobile {
+				display: none;
+			}
+
 			.img-container {
 				align-items: center;
 				background: $image-backgound;
@@ -49,6 +86,11 @@
 				display: flex;
 				height: 500px;
 				justify-content: center;
+				@include desktop-md {
+					height: 300px;
+					align-items: flex-start;
+					justify-content: flex-start;
+				}
 			}
 			img {
 				height: 100%;

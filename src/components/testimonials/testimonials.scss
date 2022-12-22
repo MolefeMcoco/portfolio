@@ -24,6 +24,9 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		@include mobile {
+			flex-direction: column;
+		}
 	}
 
 	h2 {
@@ -38,7 +41,9 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-
+		@include mobile {
+			flex-direction: column;
+		}
 		.item {
 			background-color: $primary-background;
 			padding: 40px;
@@ -50,11 +55,17 @@
 			box-shadow: $shadow;
 			margin: 10px;
 			transition: all ease-in-out 1s;
+			@include desktop-md {
+				padding: 20px 10px;
+			}
 
 			h4 {
 				color: $primary;
 				margin-top: 20px;
 				transition: all ease-in-out 1s;
+				@include desktop-md {
+					text-align: center;
+				}
 			}
 		}
 

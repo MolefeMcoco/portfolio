@@ -10,7 +10,14 @@
 }
 
 .services {
-	margin-top: -120px;
+	margin-top: -150px;
+	@include desktop-md {
+		margin-top: -320px;
+	}
+
+	@include mobile {
+		margin-top: 0px;
+	}
 	.container {
 		display: flex;
 		justify-content: center;
@@ -21,6 +28,9 @@
 		position: relative;
 		box-shadow: $shadow;
 		transition: all ease-in-out 1s;
+		@include mobile {
+			flex-direction: column;
+		}
 
 		.item {
 			display: flex;
@@ -32,6 +42,13 @@
 			height: 100%;
 			padding: 50px;
 
+			@include desktop-md {
+				padding: 20px 10px;
+			}
+
+			@include mobile {
+				margin-bottom: 30px;
+			}
 			img {
 				height: 30px;
 			}

@@ -11,7 +11,7 @@ $dark-backgound: #292929;
 $shadow: 0px 3px 6px #0000000D;
 $border-radius: 20px;
 
-$width-lg: 1100px;
+$width-lg: 1200px;
 $width-md: 992px;
 $width-sm: 768px;
 $width-xs: 567px;
@@ -28,14 +28,8 @@ $width-xs: 567px;
 	}
 }
 
-@mixin tablet {
-	@media (max-width: #{$width-sm}) {
-		@content;
-	}
-}
-
 @mixin mobile {
-	@media (max-width: #{$width-xs}) {
+	@media (max-width: #{$width-sm}) {
 		@content;
 	}
 }
@@ -52,9 +46,15 @@ h5 {
 h1 {
 	font-size: 60px;
 	font-weight: 800;
+	@include desktop-md {
+		font-size: 50px;
+	}
 }
 h2 {
 	font-size: 50px;
+	@include desktop-md {
+		font-size: 40px;
+	}
 }
 
 h3 {
@@ -72,4 +72,8 @@ span {
 
 section {
 	padding: 50px 0px;
+
+	@include mobile {
+		padding: 20px 0px;
+	}
 }

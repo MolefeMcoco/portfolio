@@ -7,7 +7,6 @@ const Services = () => {
 	const { data } = useContext(DataContext);
 	const { theme } = useContext(ThemeContext);
 	const services = data.services;
-	console.log(theme);
 
 	return (
 		<section className="services" id="services">

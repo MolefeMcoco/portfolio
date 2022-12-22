@@ -35,14 +35,12 @@ body {
 	width: 1140px;
 	margin: 0 auto;
 
-	@include desktop-md {
+	@include desktop-lg {
 		width: 960px;
 	}
-	@include tablet {
-		width: 720px;
-	}
-	@include mobile {
-		width: 540px;
+
+	@include desktop-md {
+		width: 98%;
 	}
 }
 

@@ -6,7 +6,7 @@ import { DataContext } from '../../context/data.context';
 
 const About = ({ displayModal, slide }) => {
 	const { data } = useContext(DataContext);
-	console.log(data.about.title);
+
 	return (
 		<section className="about" id="about">
 			<div className="container">

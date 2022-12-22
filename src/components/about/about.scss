@@ -5,9 +5,19 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		@include mobile {
+			flex-direction: column;
+		}
 		.left {
 			display: flex;
 			flex: 1;
+			@include desktop-md {
+				width: 50%;
+			}
+			@include mobile {
+				width: 90%;
+			}
+
 			.img-container {
 				background-color: $secondary-background;
 				border-radius: $border-radius;
@@ -27,6 +37,14 @@
 			padding: 50px 50px 50px 120px;
 			.subheading {
 				font-weight: bold;
+			}
+			@include desktop-md {
+				width: 50%;
+			}
+
+			@include mobile {
+				width: 100%;
+				padding: 10px;
 			}
 
 			.buttons {

@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import './work.scss';
 import { DataContext } from '../../context/data.context';
+import LanguageIcon from '@mui/icons-material/Language';
 
 const Work = () => {
 	const { data } = useContext(DataContext);
-	console.log(data.portfolio[0].url);
+
 	return (
 		<section className="work" id="work">
 			<div className="container">
@@ -13,6 +14,9 @@ const Work = () => {
 					return (
 						<div className="item" key={item.logo}>
 							<div className="image">
+								<p onClick={() => window.open(item.link)} className="overlay">
+									Visit Website <LanguageIcon sx={{ fontSize: 30, marginLeft: 1 }} />
+								</p>
 								<img src={item.image} alt={item.alt} />
 							</div>
 							<div className="business-info">

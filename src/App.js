@@ -14,6 +14,7 @@ import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import CopyRight from './components/copyRight/CopyRight';
 import Modals from './components/modal/Modals';
+import Menu from './components/menu/Menu';
 
 export const ThemeContext = createContext(null);
 
@@ -21,13 +22,17 @@ function App() {
 	const { data } = useContext(DataContext);
 	const [ theme, setTheme ] = useState('light');
 	const [ showModal, setShowModal ] = useState(false);
-	useEffect(() => {
-		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
-			const colorScheme = event.matches ? 'dark' : 'light';
+	const [ menuOpen, setMenuOpen ] = useState(false);
+	useEffect(
+		() => {
+			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+				const colorScheme = event.matches ? 'dark' : 'light';
 
-			setTheme(colorScheme);
-		});
-	}, []);
+				setTheme(colorScheme);
+			});
+		},
+		[ theme ]
+	);
 	const toggleTheme = () => {
 		setTheme((curr) => (curr === 'light' ? 'dark' : 'light'));
 	};
@@ -56,8 +61,8 @@ function App() {
 						<DarkModeOutlinedIcon className="dark-icon" onClick={() => toggleTheme()} />
 					)}
 					<Modals showModal={showModal} setShowModal={setShowModal} />
-					<Navbar />
-
+					<Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+					<Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 					<Header displayModal={displayModal} slide={slide} />
 					<Services />
 					<Work />

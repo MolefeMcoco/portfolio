@@ -3,13 +3,15 @@
 .faq {
 	.container {
 		display: flex;
-		flex-direction: column;
 	}
 
 	.content {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		@include mobile {
+			flex-direction: column;
+		}
 		.left {
 			flex: 1;
 			padding: 40px;
