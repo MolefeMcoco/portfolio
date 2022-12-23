@@ -11,7 +11,7 @@ const Header = ({ displayModal, slide }) => {
 	return (
 		<section className="header" id="home">
 			<div className="container">
-				<div className="right hidden">
+				<div className="hidden">
 					<div className="img-container">
 						<img src={header.image} alt={header.imagealt} />
 					</div>

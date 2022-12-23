@@ -1,5 +1,15 @@
 @import "../../global.scss";
 
+#dark {
+	.menu {
+		background-color: $tertiary;
+	}
+
+	a {
+		color: $secondary;
+	}
+}
+
 .menu {
 	width: 250px;
 	height: 100vh;

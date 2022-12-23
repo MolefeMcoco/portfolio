@@ -11,32 +11,21 @@
 
 		.item {
 			display: flex;
-			border-radius: 25px;
+
 			margin-bottom: 30px;
 			box-shadow: $shadow;
 			height: 425px;
-
-			@include desktop-lg {
-				height: 357px;
-			}
 			@include desktop-md {
-				height: 279px;
+				height: 350px;
 			}
-
-			@include mobile {
-				height: 100%;
-				border-radius: 0px 0px $border-radius $border-radius;
-			}
-
 			@include mobile {
 				flex-direction: column;
+				height: 100%;
 			}
 			.image {
 				flex: 2;
 				position: relative;
-				@include mobile {
-					border-radius: 0px 0px $border-radius $border-radius;
-				}
+
 				.overlay {
 					position: absolute;
 					width: 100%;
@@ -53,9 +42,7 @@
 					opacity: 0;
 					border-radius: $border-radius 0 0 $border-radius;
 					font-size: 30px;
-					@include mobile {
-						border-radius: 0px 0px $border-radius $border-radius;
-					}
+
 					&:hover {
 						opacity: 1;
 					}
@@ -64,6 +51,10 @@
 				img {
 					width: 100%;
 					height: 100%;
+					border-radius: $border-radius 0 0 $border-radius;
+					@include mobile {
+						border-radius: $border-radius $border-radius 0 0 !important;
+					}
 				}
 			}
 			.business-info {
@@ -72,13 +63,15 @@
 				flex-direction: column;
 				background-color: $primary;
 				padding: 10px 0px 0px 20px;
+				border-radius: 0 $border-radius $border-radius 0;
+				justify-content: center;
 
 				@include mobile {
-					border-radius: 0px 0px $border-radius $border-radius;
+					border-radius: 0 0 $border-radius $border-radius;
+					margin-top: -10px;
+					padding: 25px 10px;
 				}
 
-				border-radius: 0px $border-radius $border-radius 0px;
-				justify-content: center;
 				p {
 					color: $primary-background !important;
 
@@ -88,8 +81,9 @@
 				}
 				img {
 					width: 150px;
+
 					@include desktop-md {
-						width: 50px;
+						width: 100px;
 					}
 				}
 			}

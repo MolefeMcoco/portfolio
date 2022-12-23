@@ -7,7 +7,7 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
 	const { data } = useContext(DataContext);
 	console.log(menuOpen);
 	return (
-		<nav className={'navbar ' + (menuOpen && 'active')}>
+		<section className={'navbar ' + (menuOpen && 'active')}>
 			<div className="container">
 				<div className="logo">
 					<Link to="home" spy={true} smooth={true} offset={-200} duration={1000}>
@@ -38,7 +38,7 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
 					</div>
 				</div>
 			</div>
-		</nav>
+		</section>
 	);
 };
 

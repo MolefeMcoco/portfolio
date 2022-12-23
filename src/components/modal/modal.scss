@@ -4,6 +4,10 @@
 	.modal {
 		background-color: #171717;
 	}
+
+	.exit-button {
+		color: $secondary;
+	}
 }
 
 .backdrop {
@@ -33,8 +37,13 @@
 		margin-top: 70px;
 		position: relative;
 		z-index: 99999;
+
 		@include desktop-md {
-			min-width: 70%;
+			width: 70%;
+		}
+
+		@include mobile {
+			width: 80%;
 		}
 
 		h2 {
@@ -44,12 +53,12 @@
 		}
 	}
 	.exit-button {
-		color: #fff;
+		color: $primary;
 		z-index: 2;
 		cursor: pointer;
 		position: absolute;
-		right: 10px;
-		top: 10px;
+		right: 20px;
+		top: 20px;
 
 		font-weight: bolder;
 	}

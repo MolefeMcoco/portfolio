@@ -10,11 +10,7 @@
 }
 
 .services {
-	margin-top: -150px;
-	@include desktop-md {
-		margin-top: -320px;
-	}
-
+	margin-top: -170px;
 	@include mobile {
 		margin-top: 0px;
 	}
@@ -41,20 +37,16 @@
 			padding: 10px;
 			height: 100%;
 			padding: 50px;
-
 			@include desktop-md {
-				padding: 20px 10px;
+				padding: 20px 5px;
 			}
 
 			@include mobile {
-				margin-bottom: 30px;
-			}
-			img {
-				height: 30px;
+				padding: 25px 10px;
 			}
 
-			img path {
-				fill: red !important;
+			img {
+				height: 30px;
 			}
 
 			h4 {
@@ -63,6 +55,12 @@
 
 			&:nth-child(2) {
 				box-shadow: $shadow;
+			}
+
+			@include mobile {
+				&:nth-child(1) {
+					box-shadow: $shadow;
+				}
 			}
 		}
 	}

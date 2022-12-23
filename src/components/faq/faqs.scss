@@ -1,6 +1,16 @@
 @import "../../global.scss";
 
 .faq {
+	section {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+	}
+
+	@include desktop-md {
+		padding-bottom: 0px;
+	}
 	.container {
 		display: flex;
 	}
@@ -19,11 +29,18 @@
 				width: 100%;
 				margin-top: 50px;
 			}
+
+			@include mobile {
+				padding: 10px;
+			}
 		}
 
 		.right {
 			flex: 2;
 			padding: 40px;
+			@include mobile {
+				padding: 10px;
+			}
 		}
 	}
 }
@@ -59,6 +76,7 @@
 				transition: all ease-in-out 1s;
 				font-weight: bold;
 				border-bottom: solid 1px $secondary-background;
+				width: 100%;
 			}
 
 			.row-content {

@@ -4,6 +4,10 @@
 	.testimonials {
 		background: linear-gradient(90deg, $dark-backgound 50%, $secondary-background 50%);
 		transition: all ease-in-out 1s;
+		@include mobile {
+			background: $secondary-background;
+			border-radius: 0;
+		}
 		.item {
 			background-color: $tertiary;
 			transition: all ease-in-out 1s;
@@ -11,6 +15,10 @@
 			h4 {
 				color: $dark;
 				transition: all ease-in-out 1s;
+			}
+
+			p {
+				color: $dark !important;
 			}
 		}
 	}
@@ -20,6 +28,12 @@
 	background: linear-gradient(90deg, $primary-background 50%, $secondary-background 50%);
 	border-radius: $border-radius 0 0 $border-radius;
 	transition: all ease-in-out 1s;
+
+	@include mobile {
+		background: $secondary-background;
+		border-radius: 0;
+	}
+
 	.container {
 		display: flex;
 		justify-content: center;
@@ -31,6 +45,16 @@
 
 	h2 {
 		color: $title;
+
+		@include mobile {
+			color: $secondary;
+		}
+	}
+
+	p {
+		@include mobile {
+			color: $secondary !important;
+		}
 	}
 
 	.left {
@@ -44,6 +68,7 @@
 		@include mobile {
 			flex-direction: column;
 		}
+
 		.item {
 			background-color: $primary-background;
 			padding: 40px;
@@ -55,17 +80,20 @@
 			box-shadow: $shadow;
 			margin: 10px;
 			transition: all ease-in-out 1s;
+
 			@include desktop-md {
-				padding: 20px 10px;
+				padding: 10px;
+				text-align: center;
+			}
+
+			@include mobile {
+				padding: 25px 10px;
 			}
 
 			h4 {
 				color: $primary;
 				margin-top: 20px;
 				transition: all ease-in-out 1s;
-				@include desktop-md {
-					text-align: center;
-				}
 			}
 		}
 
@@ -78,6 +106,9 @@
 			font-style: italic;
 			font-weight: 400;
 			text-align: center;
+			@include mobile {
+				color: $primary !important;
+			}
 		}
 
 		.company {

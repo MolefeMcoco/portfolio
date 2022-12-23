@@ -1,8 +1,16 @@
 @import '../../global.scss';
 
 #dark {
-	h2 {
-		color: $secondary;
+	.header {
+		h2 {
+			color: $secondary;
+		}
+
+		.left {
+			@include mobile {
+				background-color: $dark-backgound;
+			}
+		}
 	}
 }
 
@@ -11,29 +19,21 @@
 	z-index: 1;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+
 	flex-direction: column;
 	padding-top: 100px;
 
-	@include desktop-md {
-		overflow: hidden;
-	}
 	.container {
 		display: flex;
 		align-items: center;
 
-		@include desktop-md {
-			align-items: flex-start;
-		}
-
 		@include mobile {
 			flex-direction: column;
-			justify-content: center;
-			align-items: center;
 		}
 
 		.hidden {
 			display: none !important;
+
 			@include mobile {
 				display: flex !important;
 			}
@@ -42,42 +42,53 @@
 			flex: 1;
 			display: flex;
 			transition: all ease-in-out 1s;
+			padding-top: 0px;
 
 			@include mobile {
-				height: 140px;
+				margin-top: -10px;
+				background-color: $primary-background;
+				padding: 25px 10px;
+			}
+
+			h1 {
+				@include mobile {
+					padding: 0px 10px;
+				}
 			}
 
 			h2 {
 				color: $primary;
 				transition: all ease-in-out 1s;
+				@include mobile {
+					padding: 0px 10px;
+				}
+			}
+
+			p {
+				padding-right: 10px;
+				@include mobile {
+					padding: 0px 10px;
+				}
 			}
 
 			.buttons {
 				display: flex;
 				margin-top: 50px;
-
-				height: 300px;
-				@include desktop-md {
-					margin-top: 25px;
-				}
 				@include mobile {
-					height: 140px;
+					flex-direction: column;
+					margin-top: 0px;
 				}
-
 				span {
 					margin-right: 5px;
 				}
 			}
 		}
 
-		.right {
+		.right,
+		.hidden {
 			flex: 1;
 			display: flex;
 			justify-content: center;
-
-			@include mobile {
-				display: none;
-			}
 
 			.img-container {
 				align-items: center;
@@ -86,14 +97,20 @@
 				display: flex;
 				height: 500px;
 				justify-content: center;
-				@include desktop-md {
-					height: 300px;
-					align-items: flex-start;
-					justify-content: flex-start;
+
+				@include mobile {
+					height: 250px;
 				}
 			}
 			img {
 				height: 100%;
+				width: 100%;
+			}
+		}
+
+		.right {
+			@include mobile {
+				display: none;
 			}
 		}
 	}

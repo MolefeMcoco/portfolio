@@ -27,10 +27,13 @@
 	transition: all ease-in 0.2s;
 	border: 1px solid $title;
 	border-radius: 2px;
-	@include desktop-md {
-		min-width: 190px;
-	}
 
+	@include desktop-md {
+		margin-right: 5px;
+	}
+	@include mobile {
+		margin-right: 0px;
+	}
 	&:hover {
 		background-color: $tertiary;
 		color: $secondary;

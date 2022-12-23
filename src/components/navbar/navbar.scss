@@ -8,6 +8,13 @@
 		a {
 			color: $dark;
 		}
+		.hamburger {
+			span {
+				@include mobile {
+					background-color: $secondary;
+				}
+			}
+		}
 	}
 }
 
